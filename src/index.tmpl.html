@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <base target="_blank"/>
+    <title>MyProjects</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/img/favicon.png">
+</head>
+<body>
+<nav class="navbar navbar-light bg-light shadow-sm sticky-top justify-content-between" id="navbar">
+    <div>
+        <img src="./assets/img/code.svg" width="40" height="40" alt="logo" loading="lazy">
+        <a class="navbar-brand font-weight-bold ml-1" href="#" target="_self">MyProjects</a>
+    </div>
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="请输入关键字">
+        <button class="btn btn-primary ml-2 ml-md-1" type="button">
+            <i class="fas fa-search"></i>
+        </button>
+    </form>
+</nav>
+
+<div class="container-fluid justify-content-center mt-5">
+    <div id="carouse" class="carousel slide shadow-lg w-75 mx-auto" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouse" data-slide-to="0" class="active"></li>
+            <li data-target="#carouse" data-slide-to="1"></li>
+            <li data-target="#carouse" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="https://todo.lushan.tech">
+                    <img src="./assets/img/todo.png" class="d-block w-100" alt="todo" style="filter: blur(1px)">
+                </a>
+                <div class="carousel-caption d-block mb-md-5 mb-sm-0">
+                    <a class="text-primary card-link h1" href="https://todo.lushan.tech">Todo</a>
+                    <p class="text-secondary">具有搜索功能与列表分类的简约待办事项</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="http://epidemic.lushan.tech">
+                    <img src="./assets/img/epidemic.png" class="d-block w-100" alt="epidemic" style="filter: blur(1px)">
+                </a>
+                <div class="carousel-caption  d-block mb-md-5 mb-sm-1">
+                    <a class="text-primary card-link h1" href="http://epidemic.lushan.tech">Epidemic</a>
+                    <p class="text-secondary">统计疫情信息的综合后台管理平台</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="https://resume.lushan.tech">
+                    <img src="./assets/img/resume.png" class="d-block w-100" alt="resume" style="filter: blur(1px)">
+                </a>
+                <div class="carousel-caption  d-block mb-md-5 mb-sm-1">
+                    <a class="text-primary card-link h1" href="https://resume.lushan.tech">Resume</a>
+                    <p class="text-secondary">美观简洁的个人求职简历</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouse" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouse" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="my-5 " id="project-pane">
+        <ul class="nav nav-pills justify-content-center" id="pills-tab">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href="#allProject">所有项目</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#javaEE">JavaEE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#bootstrap">Bootstrap</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#vue">Vue</a>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content mb-5">
+        <div class="tab-pane fade show active" id="allProject">
+            <div class="row row-cols-1 row-cols-md-2 col-8 mx-auto">
+                <div class="col mb-4">
+                    <div class="card h-100 shadow-lg rounded-lg">
+                        <a href="https://todo.lushan.tech">
+                            <img src="./assets/img/todo.png" class="card-img-top shadow-sm" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Todo</h5>
+                            <p class="card-text">具有搜索功能与列表分类的简约待办事项</p>
+                        </div>
+                        <a href="https://github.com/LuShan123888/Todo" class="btn btn-primary w-50 mb-3 mx-auto">
+                            查看详细</a>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card h-100 shadow-lg rounded-lg">
+                        <a href="http://epidemic.lushan.tech">
+                            <img src="./assets/img/epidemic.png" class="card-img-top  shadow-sm" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Epidemic</h5>
+                            <p class="card-text">统计疫情信息的综合后台管理平台</p>
+                        </div>
+                        <a href="https://github.com/LuShan123888/Epidemic" class="btn btn-primary w-50 mb-3 mx-auto">
+                            查看详细</a>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card h-100 shadow-lg rounded-lg">
+                        <a href="http://tally.lushan.tech">
+                            <img src="./assets/img/tally.png" class="card-img-top  shadow-sm" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Tally</h5>
+                            <p class="card-text">基于Servlet的记账平台</p>
+                        </div>
+                        <a href="https://github.com/LuShan123888/Tally" class="btn btn-primary w-50 mb-3 mx-auto">
+                            查看详细</a>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card h-100 shadow-lg rounded-lg">
+                        <a href="http://mediashare.lushan.tech">
+                            <img src="./assets/img/mediashare.png" class="card-img-top  shadow-sm" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">MediaShare</h5>
+                            <p class="card-text">一个多媒体分享网站</p>
+                        </div>
+                        <a href="https://github.com/LuShan123888/MediaShare" class="btn btn-primary w-50 mb-3 mx-auto">
+                            查看详细</a>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card h-100 shadow-lg rounded-lg">
+                        <a href="https://resume.lushan.tech">
+                            <img src="./assets/img/resume.png" class="card-img-top shadow-sm" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Resume</h5>
+                            <p class="card-text">美观简洁的个人求职简历</p>
+                        </div>
+                        <a href="https://github.com/LuShan123888/Resume" class="btn btn-primary w-50 mb-3 mx-auto">
+                            查看详细</a>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card h-100 shadow-lg rounded-lg">
+                        <a href="http://softwaremagic.lushan.tech">
+                            <img src="./assets/img/softwaremagic.png" class="card-img-top  shadow-sm" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">SoftwareMagic</h5>
+                            <p class="card-text">一个关于软件编程的个人博客</p>
+                        </div>
+                        <a href="https://github.com/LuShan123888/SoftwareMagic"
+                           class="btn btn-primary w-50 mb-3 mx-auto">
+                            查看详细</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade show" id="javaEE">
+            <div class="row row-cols-1 row-cols-md-2 col-8 mx-auto">
+                <div class="col mb-4">
+                    <div class="card h-100 shadow-lg rounded-lg">
+                        <a href="http://epidemic.lushan.tech">
+                            <img src="./assets/img/epidemic.png" class="card-img-top  shadow-sm" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Epidemic</h5>
+                            <p class="card-text">统计疫情信息的综合后台管理平台</p>
+                        </div>
+                        <a href="https://github.com/LuShan123888/Epidemic" class="btn btn-primary w-50 mb-3 mx-auto">
+                            查看详细</a>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card h-100 shadow-lg rounded-lg">
+                        <a href="http://tally.lushan.tech">
+                            <img src="./assets/img/tally.png" class="card-img-top  shadow-sm" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Tally</h5>
+                            <p class="card-text">基于Servlet的记账平台</p>
+                        </div>
+                        <a href="https://github.com/LuShan123888/Tally" class="btn btn-primary w-50 mb-3 mx-auto">
+                            查看详细</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade show" id="bootstrap">
+            <div class="row row-cols-1 row-cols-md-2 col-8 mx-auto">
+                <div class="col mb-4">
+                    <div class="card h-100 shadow-lg rounded-lg">
+                        <a href="https://todo.lushan.tech">
+                            <img src="./assets/img/todo.png" class="card-img-top shadow-sm" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Todo</h5>
+                            <p class="card-text">具有搜索功能与列表分类的简约待办事项</p>
+                        </div>
+                        <a href="https://github.com/LuShan123888/Todo" class="btn btn-primary w-50 mb-3 mx-auto">
+                            查看详细</a>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card h-100 shadow-lg rounded-lg">
+                        <a href="https://resume.lushan.tech">
+                            <img src="./assets/img/resume.png" class="card-img-top shadow-sm" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Resume</h5>
+                            <p class="card-text">美观简洁的个人求职简历</p>
+                        </div>
+                        <a href="https://github.com/LuShan123888/Resume" class="btn btn-primary w-50 mb-3 mx-auto">
+                            查看详细</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade show" id="vue">
+            <div class="row row-cols-1 row-cols-md-2 col-8 mx-auto">
+                <div class="col mb-4">
+                    <div class="card h-100 shadow-lg rounded-lg">
+                        <a href="http://epidemic.lushan.tech">
+                            <img src="./assets/img/epidemic.png" class="card-img-top  shadow-sm" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Epidemic</h5>
+                            <p class="card-text">统计疫情信息的综合后台管理平台</p>
+                        </div>
+                        <a href="https://github.com/LuShan123888/Epidemic" class="btn btn-primary w-50 mb-3 mx-auto">
+                            查看详细</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
