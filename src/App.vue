@@ -5,7 +5,7 @@
     <v-app-bar app :collapse="isCollapse" :style="{ 'z-index': '101' }">
       <v-app-bar-nav-icon class="ml-3">
         <v-avatar size="45" rounded>
-          <img :src="logo" alt="avatar"/>
+          <img :src="logo" alt="avatar" />
         </v-avatar>
       </v-app-bar-nav-icon>
       <v-app-bar-title class="text-h6" v-text="title"></v-app-bar-title>
@@ -20,7 +20,7 @@
       }"
     >
       <v-container fluid class="pa-0">
-        <home @collapse="collapse" ref="home"></home>
+        <home @collapse="collapse" @changeIcon="changeIcon" ref="home"></home>
       </v-container>
     </v-main>
   </v-app>
@@ -40,6 +40,7 @@ export default {
   },
   data: function () {
     return {
+      icon: null,
       title: "MyProjects",
       domain: "lushan.tech",
       bgImg: "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg",
@@ -55,7 +56,7 @@ export default {
   },
   methods: {
     collapse: function (active) {
-      this.isCollapse = active == "true" ? true : false;
+      this.isCollapse = active ? true : false;
     },
     swipe(direction) {
       if (direction == "Up") {
@@ -64,6 +65,9 @@ export default {
       if (direction == "Down") {
         this.$refs.home.shrink();
       }
+    },
+    changeIcon: function () {
+      // this.icon = "<v-icon size='45'>mdi-chevron-left</v-icon>";
     },
   },
 };

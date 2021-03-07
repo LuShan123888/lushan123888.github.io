@@ -1,6 +1,9 @@
 body {
 }
 
+img {
+    -webkit-user-drag: none;
+}
 ::-webkit-scrollbar {
     /*隐藏滚轮*/
     display: none;
