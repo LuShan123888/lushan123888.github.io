@@ -5,7 +5,7 @@
     <v-app-bar app :collapse="isCollapse" :style="{ 'z-index': '101' }">
       <v-app-bar-nav-icon class="ml-3">
         <v-avatar size="45" rounded>
-          <img :src="logo" alt="avatar" />
+          <img :src="icon" alt="avatar" />
         </v-avatar>
       </v-app-bar-nav-icon>
       <v-app-bar-title class="text-h6" v-text="title"></v-app-bar-title>
@@ -27,7 +27,9 @@
 </template>
 
 <script>
-import Logo from "../src/assets/img/favicon.png";
+import logo from "../src/assets/img/favicon.png";
+import backButtonLight from "../src/assets/img/back-light.png";
+import backButtonDark from "../src/assets/img/back-dark.png";
 import DarkButton from "./components/DarkButton.vue";
 import Home from "./views/Home.vue";
 export default {
@@ -37,14 +39,24 @@ export default {
     isMobile: function () {
       return this.$vuetify.breakpoint.mobile;
     },
+    backButton: function () {
+      return this.$vuetify.theme.dark ? backButtonDark : backButtonLight;
+    },
+    isDark: function () {
+      return this.$vuetify.theme.dark;
+    },
+  },
+  watch: {
+    isDark: function () {
+      this.icon = this.backButton;
+    },
   },
   data: function () {
     return {
-      icon: null,
+      icon: logo,
       title: "MyProjects",
       domain: "lushan.tech",
-      bgImg: "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg",
-      logo: Logo,
+      bgImg: "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/img/bg.jpg",
       isCollapse: false,
       style: {
         darkButton: {
@@ -66,8 +78,8 @@ export default {
         this.$refs.home.shrink();
       }
     },
-    changeIcon: function () {
-      // this.icon = "<v-icon size='45'>mdi-chevron-left</v-icon>";
+    changeIcon: function (active) {
+      this.icon = active ? this.backButton : logo;
     },
   },
 };

@@ -1,5 +1,29 @@
 <template>
   <div :style="{ width: '100%' }">
+    <v-row align="center" justify="center" style="height: 90vh">
+      <v-col
+        class="text-center"
+        cols="12"
+        :style="{
+          color: '#F5F5F5',
+        }"
+      >
+        <h1
+          :style="{
+            fontSize: this.$vuetify.breakpoint.mobile ? '3rem' : '8rem',
+          }"
+        >
+          {{ title }}
+        </h1>
+        <h4
+          :style="{
+            fontSize: this.$vuetify.breakpoint.mobile ? '1rem' : '1rem',
+          }"
+        >
+          {{ subtitle }}
+        </h4>
+      </v-col>
+    </v-row>
     <v-row
       :style="{
         width: '100%',
@@ -20,7 +44,6 @@
       >
         <v-tabs
           v-model="tab"
-          centered
           icons-and-text
           :style="{
             borderTopLeftRadius: '0.5rem',
@@ -35,6 +58,7 @@
             :key="index"
             :href="'#tab-' + index"
             @click="stretch"
+            class="font-weight-bold"
           >
             {{ item.title }}
             <v-icon>{{ item.icon }}</v-icon>
@@ -48,12 +72,65 @@
             v-for="(item, index) in tabs"
             :key="index"
             :value="'tab-' + index"
+            :style="{
+              overflow: 'scroll',
+              height: $vuetify.breakpoint.mobile ? '85vh' : '90vh',
+            }"
           >
-            <v-card flat>
-              <v-card-text :style="{ overflow: 'scroll', height: '90vh' }">
-                {{ item.content }}</v-card-text
+            <v-row
+              justify="center"
+              class="pt-8"
+              :style="{ 'padding-bottom': '100px' }"
+            >
+              <v-col
+                v-for="(item, index) in item.cards"
+                :key="index"
+                :cols="$vuetify.breakpoint.mobile ? 10 : 5"
               >
-            </v-card>
+                <v-hover v-slot="{ hover }">
+                  <v-card
+                    flat
+                    elevation="10"
+                    shaped
+                    class="my-2 transition-swing"
+                    :class="[
+                      `elevation-${hover ? 24 : 6}`,
+                      $vuetify.breakpoint.mobile ? 'mx-0' : 'mx-7',
+                    ]"
+                  >
+                    <v-img
+                      :src="item.img"
+                      height="200px"
+                      style="border-bottom: solid #1976d2"
+                    ></v-img>
+                    <v-card-title>{{ item.title }}</v-card-title>
+                    <v-card-subtitle>
+                      {{ item.describe }}
+                    </v-card-subtitle>
+                    <v-card-actions class="pb-5">
+                      <v-btn
+                        :href="item.link"
+                        target="_blank"
+                        color="primary"
+                        :disabled="item.link == null"
+                      >
+                        <span class="mr-1">预览效果</span>
+                        <v-icon>mdi-monitor-cellphone</v-icon>
+                      </v-btn>
+                      <v-btn
+                        :href="item.github"
+                        target="_blank"
+                        color="primary"
+                        :disabled="item.github == null"
+                      >
+                        <span class="mr-1">查看源码</span>
+                        <v-icon>mdi-code-braces</v-icon>
+                      </v-btn>
+                    </v-card-actions>
+                  </v-card>
+                </v-hover>
+              </v-col>
+            </v-row>
           </v-tab-item>
         </v-tabs-items>
       </v-col>
@@ -67,27 +144,27 @@ export default {
   components: {},
   data: function () {
     return {
-      title: "个人信息",
+      title: "MyProjects",
+      subtitle: "一个关于项目展示的个人主页",
       info: null,
       tab: "tab-4",
       tabs: [
         {
           title: "前端",
           icon: "mdi-web",
-          content: "前端",
+          cards: null,
         },
         {
           title: "后端",
           icon: "mdi-database",
-          content: "后端",
+          cards: null,
         },
         {
           title: "其他",
           icon: "mdi-dots-horizontal-circle-outline",
-          content: "其他",
+          cards: null,
         },
       ],
-
       style: {
         panel: {
           height: "70px",
@@ -110,15 +187,23 @@ export default {
       },
     };
   },
+  mounted() {
+    this.axios.get(this.GLOBAL.dataSrc).then((response) => {
+      this.tabs = response.data.tabs;
+    });
+  },
   methods: {
     stretch: function () {
-      this.style.panel.height = "90vh";
+      this.style.panel.height = this.$vuetify.breakpoint.mobile
+        ? "85vh"
+        : "90vh";
       this.$emit("collapse", true);
-      this.$emit("changeIcon")
+      this.$emit("changeIcon", true);
     },
     shrink: function () {
       this.style.panel.height = "70px";
       this.$emit("collapse", false);
+      this.$emit("changeIcon", false);
     },
     include() {
       return [document.querySelector("#dark-button")];

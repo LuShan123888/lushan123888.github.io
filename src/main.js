@@ -10,14 +10,15 @@ import "./styles/index.scss"
 
 //Plugins
 import vuetify from './plugins/vuetify';
-// import './plugins/element.js'
-// import './plugins/bootstrap-vue'
-// import './plugins/fontawesome'
 
 //Axios
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
+
+//Global variation
+import global_ from './components/Global'
+Vue.prototype.GLOBAL = global_
 
 
 Vue.config.productionTip = false;
