@@ -7,14 +7,14 @@
                 {
                     "title": "Resume",
                     "describe": "一个基于 Vue 的简约个人简历",
-                    "img": "/img/resume.png",
+                    "img": "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/img/resume.jpg",
                     "link": "https://resume.lushan.tech",
                     "github": "https://github.com/LuShan123888/Resume"
                 },
                 {
                     "title": "Todo",
                     "describe": "具有搜索功能与列表分类的简约待办事项",
-                    "img": "/img/todo.png",
+                    "img": "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/img/todo.jpg",
                     "link": "https://todo.lushan.tech",
                     "github": "https://github.com/LuShan123888/Todo"
                 }
@@ -27,14 +27,14 @@
                 {
                     "title": "记账吧",
                     "describe": "一个基于 Servlet 开发的在线记账网站",
-                    "img": "/img/tally.png",
+                    "img": "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/img/tally.jpg",
                     "link": "http://tally.lushan.tech",
                     "github": "https://github.com/LuShan123888/Tally"
                 },
                 {
                     "title": "\"光光爱\"微信小程序后台管理系统",
                     "describe": "\"光光爱\"微信小程序的配套服务，用于向运营和管理人员提供后台管理服务",
-                    "img": "/img/gms.png",
+                    "img": "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/img/gms.jpg",
                     "link": "https://gms.guangguangai.com/#/login",
                     "github": null
                 }
@@ -47,7 +47,7 @@
                 {
                     "title": "SoftwareMagic",
                     "describe": "一个关于编程的个人知识库",
-                    "img": "/img/softwaremagic.png",
+                    "img": "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/img/softwaremagic.jpg",
                     "link": "https://softwaremagic.lushan.tech",
                     "github": "https://github.com/LuShan123888/SoftwareMagic"
                 }
