@@ -1,6 +1,6 @@
 <template>
   <div :style="{ width: '100%' }">
-    <v-row align="center" justify="center" style="height: 80vh">
+    <v-row align="center" justify="center" style="margin-top: 25vh">
       <v-col
         class="text-center"
         cols="12"
@@ -17,7 +17,7 @@
         </h1>
         <h4
           :style="{
-            fontSize: this.$vuetify.breakpoint.mobile ? '1rem' : '1rem',
+            fontSize: this.$vuetify.breakpoint.mobile ? '1rem' : '1.5rem',
           }"
         >
           {{ subtitle }}
@@ -89,9 +89,6 @@
               >
                 <v-hover v-slot="{ hover }">
                   <v-card
-                    flat
-                    elevation="10"
-                    shaped
                     class="my-2 transition-swing"
                     :class="[
                       `elevation-${hover ? 24 : 6}`,
