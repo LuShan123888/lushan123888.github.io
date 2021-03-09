@@ -12,11 +12,11 @@
                     "github": "https://github.com/LuShan123888/Resume"
                 },
                 {
-                    "title": "Todo",
-                    "describe": "具有搜索功能与列表分类的简约待办事项",
-                    "img": "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/img/todo.jpg",
-                    "link": "https://todo.lushan.tech",
-                    "github": "https://github.com/LuShan123888/Todo"
+                    "title": "MyProjects",
+                    "describe": "一个关于项目展示的个人主页",
+                    "img": "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/img/myprojects.jpg",
+                    "link": "https://lushan.tech",
+                    "github": "https://github.com/LuShan123888/lushan123888.github.io"
                 }
             ]
         },

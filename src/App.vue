@@ -11,14 +11,7 @@
       <v-app-bar-title class="text-h6" v-text="title"></v-app-bar-title>
     </v-app-bar>
 
-    <v-main
-      v-touch="{
-        left: () => swipe('Left'),
-        right: () => swipe('Right'),
-        up: () => swipe('Up'),
-        down: () => swipe('Down'),
-      }"
-    >
+    <v-main>
       <v-container fluid class="pa-0">
         <home @collapse="collapse" @changeIcon="changeIcon" ref="home"></home>
       </v-container>
@@ -56,7 +49,8 @@ export default {
       icon: logo,
       title: "MyProjects",
       domain: "lushan.tech",
-      bgImg: "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/img/bg.jpg",
+      bgImg:
+        "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/img/bg.jpg",
       isCollapse: false,
       style: {
         darkButton: {
@@ -69,14 +63,6 @@ export default {
   methods: {
     collapse: function (active) {
       this.isCollapse = active ? true : false;
-    },
-    swipe(direction) {
-      if (direction == "Up") {
-        this.$refs.home.stretch();
-      }
-      if (direction == "Down") {
-        this.$refs.home.shrink();
-      }
     },
     changeIcon: function (active) {
       this.icon = active ? this.backButton : logo;

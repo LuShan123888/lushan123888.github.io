@@ -1,6 +1,6 @@
 <template>
   <div :style="{ width: '100%' }">
-    <v-row align="center" justify="center" style="height: 90vh">
+    <v-row align="center" justify="center" style="height: 80vh">
       <v-col
         class="text-center"
         cols="12"
@@ -74,7 +74,7 @@
             :value="'tab-' + index"
             :style="{
               overflow: 'scroll',
-              height: $vuetify.breakpoint.mobile ? '85vh' : '90vh',
+              height: $vuetify.breakpoint.mobile ? '80vh' : '90vh',
             }"
           >
             <v-row
@@ -195,7 +195,7 @@ export default {
   methods: {
     stretch: function () {
       this.style.panel.height = this.$vuetify.breakpoint.mobile
-        ? "85vh"
+        ? "80vh"
         : "90vh";
       this.$emit("collapse", true);
       this.$emit("changeIcon", true);
