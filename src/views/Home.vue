@@ -1,11 +1,12 @@
 <template>
   <div :style="{ width: '100%' }">
-    <v-row align="center" justify="center" style="margin-top: 25vh">
+    <v-row style="top: 30vh; position: fixed" no-gutters>
       <v-col
         class="text-center"
         cols="12"
         :style="{
           color: '#F5F5F5',
+          width: '100vw'
         }"
       >
         <h1

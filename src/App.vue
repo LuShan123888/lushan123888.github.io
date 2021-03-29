@@ -12,7 +12,7 @@
     </v-app-bar>
 
     <v-main>
-      <v-container fluid class="pa-0">
+      <v-container fluid class="pa-0 ma-0">
         <home @collapse="collapse" @changeIcon="changeIcon" ref="home"></home>
       </v-container>
     </v-main>
