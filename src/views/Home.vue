@@ -102,7 +102,7 @@
                       style="border-bottom: solid #1976d2"
                     ></v-img>
                     <v-card-title>{{ item.title }}</v-card-title>
-                    <v-card-subtitle style="height:50px;text-indent:2em">
+                    <v-card-subtitle :style="{height:$vuetify.breakpoint.mobile?null:'50px','text-indent':'2em'}">
                       {{ item.describe }}
                     </v-card-subtitle>
                     <v-card-actions class="pb-5">
