@@ -8,14 +8,14 @@
                     "title": "Resume",
                     "describe": "一个基于 Vue 的简约个人简历",
                     "img": "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/img/resume.jpg",
-                    "link": "https://resume.lushan.tech",
+                    "link": "https://resume.lushan.tk",
                     "github": "https://github.com/LuShan123888/Resume"
                 },
                 {
                     "title": "MyProjects",
                     "describe": "一个关于项目展示的个人主页",
                     "img": "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/img/myprojects.jpg",
-                    "link": "https://lushan.tech",
+                    "link": "https://lushan.tk",
                     "github": "https://github.com/LuShan123888/lushan123888.github.io"
                 }
             ]
@@ -28,7 +28,7 @@
                     "title": "记账吧",
                     "describe": "一个基于 Servlet 开发的在线记账网站",
                     "img": "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/img/tally.jpg",
-                    "link": "http://tally.lushan.tech",
+                    "link": null,
                     "github": "https://github.com/LuShan123888/Tally"
                 },
                 {
@@ -48,7 +48,7 @@
                     "title": "SoftwareMagic",
                     "describe": "一个关于编程的个人知识库",
                     "img": "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/img/softwaremagic.jpg",
-                    "link": "https://softwaremagic.lushan.tech",
+                    "link": "https://softwaremagic.lushan.tk",
                     "github": "https://github.com/LuShan123888/SoftwareMagic"
                 }
             ]
