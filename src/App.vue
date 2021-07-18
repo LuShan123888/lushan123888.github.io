@@ -48,7 +48,6 @@ export default {
     return {
       icon: logo,
       title: "MyProjects",
-      domain: "lushan.tech",
       bgImg:
         "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/img/bg.jpg",
       isCollapse: false,
