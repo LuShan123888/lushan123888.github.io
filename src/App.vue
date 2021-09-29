@@ -29,27 +29,23 @@ export default {
   name: "app",
   components: { Home, DarkButton },
   computed: {
+    backButton: function () {
+      return this.isDark ? backButtonDark : backButtonLight;
+    },
     isMobile: function () {
       return this.$vuetify.breakpoint.mobile;
     },
-    backButton: function () {
-      return this.$vuetify.theme.dark ? backButtonDark : backButtonLight;
-    },
+
     isDark: function () {
       return this.$vuetify.theme.dark;
     },
   },
-  watch: {
-    isDark: function () {
-      this.icon = this.backButton;
-    },
-  },
+  watch: {},
   data: function () {
     return {
-      icon: logo,
       title: "MyProjects",
-      bgImg:
-        "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/img/bg.jpg",
+      bgImg: null,
+      icon: logo,
       isCollapse: false,
       style: {
         darkButton: {
@@ -66,6 +62,9 @@ export default {
     changeIcon: function (active) {
       this.icon = active ? this.backButton : logo;
     },
+  },
+  mounted() {
+      this.bgImg = this.GLOBAL.bgImg;
   },
 };
 </script>

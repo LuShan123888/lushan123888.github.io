@@ -6,7 +6,7 @@
         cols="12"
         :style="{
           color: '#F5F5F5',
-          width: '100vw'
+          width: '100vw',
         }"
       >
         <h1
@@ -35,10 +35,7 @@
     >
       <v-col
         :cols="this.$vuetify.breakpoint.mobile ? 10 : 9"
-        :style="[
-          style.panel,
-          { background: this.$vuetify.theme.dark ? '#272727' : '#FFFFFF' },
-        ]"
+        :style="[style.panel]"
         id="panel"
         class="mx-auto"
         v-click-outside="{ handler: shrink, include: include }"
@@ -102,7 +99,12 @@
                       style="border-bottom: solid #1976d2"
                     ></v-img>
                     <v-card-title>{{ item.title }}</v-card-title>
-                    <v-card-subtitle :style="{height:$vuetify.breakpoint.mobile?null:'50px','text-indent':'2em'}">
+                    <v-card-subtitle
+                      :style="{
+                        height: $vuetify.breakpoint.mobile ? null : '50px',
+                        'text-indent': '2em',
+                      }"
+                    >
                       {{ item.describe }}
                     </v-card-subtitle>
                     <v-card-actions class="pb-5">
@@ -140,29 +142,21 @@
 export default {
   name: "Home",
   components: {},
+  computed: {
+    isMobile: function () {
+      return this.$vuetify.breakpoint.mobile;
+    },
+    isDark: function () {
+      return this.$vuetify.theme.dark;
+    },
+  },
   data: function () {
     return {
       title: "MyProjects",
-      subtitle: "一个关于项目展示的个人主页",
+      subtitle: "一个展示个人项目的主页",
       info: null,
       tab: "tab-4",
-      tabs: [
-        {
-          title: "前端",
-          icon: "mdi-web",
-          cards: null,
-        },
-        {
-          title: "后端",
-          icon: "mdi-database",
-          cards: null,
-        },
-        {
-          title: "其他",
-          icon: "mdi-dots-horizontal-circle-outline",
-          cards: null,
-        },
-      ],
+      tabs: null,
       style: {
         panel: {
           height: "70px",
@@ -186,9 +180,7 @@ export default {
     };
   },
   mounted() {
-    this.axios.get(this.GLOBAL.dataSrc).then((response) => {
-      this.tabs = response.data.tabs;
-    });
+    this.tabs = this.GLOBAL.tabs;
   },
   methods: {
     stretch: function () {
