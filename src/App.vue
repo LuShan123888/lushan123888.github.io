@@ -23,8 +23,8 @@
 import logo from "../src/assets/img/favicon.png";
 import backButtonLight from "../src/assets/img/back-light.png";
 import backButtonDark from "../src/assets/img/back-dark.png";
-import DarkButton from "./components/DarkButton.vue";
-import Home from "./views/Home.vue";
+import DarkButton from "./components/DarkButton";
+import Home from "./views/Home";
 export default {
   name: "app",
   components: { Home, DarkButton },
