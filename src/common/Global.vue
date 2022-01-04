@@ -16,7 +16,7 @@ const tabs = [
       },
       {
         title: "MyProjects",
-        describe: "一个展示个人项目的主页",
+        describe: "一个用于展示项目的个人主页",
         img:
           "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/img/myprojects.jpg",
         link: "https://lushan.tk",
@@ -39,7 +39,7 @@ const tabs = [
       {
         title: '"光光爱"微信小程序后台管理系统',
         describe:
-          '"光光爱"微信小程序后台系统',
+          '“光光爱”是利用互联网平台优势解决用餐浪费和小额捐赠的微信小程序。该项目包含光盘打卡，公益宣传，排行榜，爱心捐赠，商城兑换等功能。于2020年9月上线，现有团队成员30余人，用户1000+，入驻商家10+。',
         img:
           "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/img/gms.jpg",
         link: "https://gms.guangguangai.com/#/login",

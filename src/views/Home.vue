@@ -153,7 +153,7 @@ export default {
   data: function () {
     return {
       title: "MyProjects",
-      subtitle: "一个展示个人项目的主页",
+      subtitle: "一个用于展示项目的个人主页",
       info: null,
       tab: "tab-4",
       tabs: null,
