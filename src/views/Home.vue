@@ -11,14 +11,14 @@
       >
         <h1
           :style="{
-            fontSize: this.isMobile ? '3rem' : '8rem',
+            fontSize: isMobile ? '3rem' : '8rem',
           }"
         >
           {{ title }}
         </h1>
         <h4
           :style="{
-            fontSize: this.isMobile ? '1rem' : '1.5rem',
+            fontSize: isMobile ? '1rem' : '1.5rem',
           }"
         >
           {{ subtitle }}
@@ -34,7 +34,7 @@
       no-gutters
     >
       <v-col
-        :cols="this.isMobile ? 10 : 9"
+        :cols="isMobile ? 12 : 9"
         :style="[style.panel]"
         id="panel"
         class="mx-auto"
@@ -72,7 +72,7 @@
             :value="'tab-' + index"
             :style="{
               overflow: 'scroll',
-              height: $vuetify.breakpoint.mobile ? '80vh' : '90vh',
+              height: isMobile ? '80vh' : '90vh',
             }"
           >
             <v-row
@@ -83,7 +83,7 @@
               <v-col
                 v-for="(item, index) in item.cards"
                 :key="index"
-                :cols="$vuetify.breakpoint.mobile ? 10 : 5"
+                :cols="isMobile ? 10 : 5"
               >
                 <v-hover v-slot="{ hover }">
                   <v-card
@@ -95,13 +95,14 @@
                   >
                     <v-img
                       :src="item.img"
-                      height="200px"
                       style="border-bottom: solid #1976d2"
+                      :style="{
+                        height: $vuetify.breakpoint.mobile ? '200px' : '300px',
+                      }"
                     ></v-img>
                     <v-card-title>{{ item.title }}</v-card-title>
                     <v-card-subtitle
                       :style="{
-                        height: $vuetify.breakpoint.mobile ? null : '50px',
                         'text-indent': '2em',
                       }"
                     >
@@ -184,9 +185,7 @@ export default {
   },
   methods: {
     stretch: function () {
-      this.style.panel.height = this.isMobile
-        ? "80vh"
-        : "90vh";
+      this.style.panel.height = this.isMobile ? "80vh" : "90vh";
       this.$emit("collapse", true);
       this.$emit("changeIcon", true);
     },
