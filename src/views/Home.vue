@@ -170,12 +170,12 @@ export default {
       },
       class: {
         title: {
-          "text-h2": !this.isMobile,
-          "text-h3": this.isMobile,
-          "ml-3": this.isMobile,
-          "ml-9": !this.isMobile,
-          "mt-3": this.isMobile,
-          "mt-9": !this.isMobile,
+          "text-h2": !this.$vuetify.breakpoint.mobile,
+          "text-h3": this.$vuetify.breakpoint.mobile,
+          "ml-3": this.$vuetify.breakpoint.mobile,
+          "ml-9": !this.$vuetify.breakpoint.mobile,
+          "mt-3": this.$vuetify.breakpoint.mobile,
+          "mt-9": !this.$vuetify.breakpoint.mobile,
         },
       },
     };
@@ -185,7 +185,7 @@ export default {
   },
   methods: {
     stretch: function () {
-      this.style.panel.height = this.isMobile ? "80vh" : "90vh";
+      this.style.panel.height = this.$vuetify.breakpoint.mobile ? "80vh" : "90vh";
       this.$emit("collapse", true);
       this.$emit("changeIcon", true);
     },

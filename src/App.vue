@@ -49,8 +49,8 @@ export default {
       isCollapse: false,
       style: {
         darkButton: {
-          top: this.isMobile ? "10px" : "10px",
-          right: this.isMobile ? "10px" : "40px",
+          top: this.$vuetify.breakpoint.mobile ? "10px" : "10px",
+          right: this.$vuetify.breakpoint.mobile ? "10px" : "10px",
         },
       },
     };
