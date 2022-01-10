@@ -1,11 +1,11 @@
 <template>
   <v-app>
-    <img id="background-img" :src="bgImg" />
+    <img id="background-img" :src="bgImg"/>
     <dark-button id="dark-button" :style="style.darkButton"></dark-button>
     <v-app-bar app :collapse="isCollapse" :style="{ 'z-index': '101' }">
       <v-app-bar-nav-icon class="ml-3">
         <v-avatar size="45" rounded>
-          <img :src="icon" alt="avatar" />
+          <img :src="icon" alt="avatar"/>
         </v-avatar>
       </v-app-bar-nav-icon>
       <v-app-bar-title class="text-h6" v-text="title"></v-app-bar-title>
@@ -25,9 +25,10 @@ import backButtonLight from "../src/assets/img/back-light.png";
 import backButtonDark from "../src/assets/img/back-dark.png";
 import DarkButton from "./components/DarkButton";
 import Home from "./views/Home";
+
 export default {
   name: "app",
-  components: { Home, DarkButton },
+  components: {Home, DarkButton},
   computed: {
     backButton: function () {
       return this.isDark ? backButtonDark : backButtonLight;
@@ -64,7 +65,7 @@ export default {
     },
   },
   mounted() {
-      this.bgImg = this.GLOBAL.bgImg;
+    this.bgImg = this.GLOBAL.bgImg;
   },
 };
 </script>
@@ -73,6 +74,7 @@ export default {
 #background-img {
   position: fixed;
 }
+
 #dark-button {
   position: fixed;
   z-index: 100;

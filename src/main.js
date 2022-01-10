@@ -12,18 +12,17 @@ import vuetify from './plugins/vuetify';
 //Axios
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-Vue.use(VueAxios, axios)
 
 //Global variation
 import global_ from './common/Global'
+
+Vue.use(VueAxios, axios)
 Vue.prototype.GLOBAL = global_
-
-
 Vue.config.productionTip = false;
 
 new Vue({
-  router,
-  store,
-  vuetify,
-  render: h => h(App)
+    router,
+    store,
+    vuetify,
+    render: h => h(App)
 }).$mount('#app')

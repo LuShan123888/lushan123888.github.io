@@ -1,9 +1,9 @@
 <template>
   <div class="btn-container">
     <button
-      class="dark-button"
-      aria-pressed="false"
-      @click="buttonClick($event)"
+        class="dark-button"
+        aria-pressed="false"
+        @click="buttonClick($event)"
     >
       <svg class="button-svg" focusable="false">
         <use class="svg_mode-dark" xlink:href="#icon-mode-dark"></use>
@@ -15,16 +15,16 @@
       <defs>
         <symbol viewBox="0 0 960 960" id="icon-mode-dark">
           <path
-            d="M340 41C47 129-112 544 147 798c207 204 515 205 713-62-166 6-347-43-455-189-109-147-80-372-65-506z"
+              d="M340 41C47 129-112 544 147 798c207 204 515 205 713-62-166 6-347-43-455-189-109-147-80-372-65-506z"
           />
           <path
-            d="M870 331l-12 102 93 43-101 20-12 102-50-90-101 20 70-75-50-90 93 43 70-75zM522 300l23 57 62-5-47 40 23 57-52-32-48 40 15-60-52-33 61-4 15-60zM744 16l12 89 89 16-81 39 12 90-62-65-81 39 42-80-62-65 89 16 42-79z"
+              d="M870 331l-12 102 93 43-101 20-12 102-50-90-101 20 70-75-50-90 93 43 70-75zM522 300l23 57 62-5-47 40 23 57-52-32-48 40 15-60-52-33 61-4 15-60zM744 16l12 89 89 16-81 39 12 90-62-65-81 39 42-80-62-65 89 16 42-79z"
           />
         </symbol>
         <symbol viewBox="0 0 960 960" id="icon-mode-light">
-          <circle cx="479.5" cy="480.5" r="242" />
+          <circle cx="479.5" cy="480.5" r="242"/>
           <path
-            d="M480 800c22 0 40 18 40 40v80a40 40 0 01-80 0v-80c0-22 18-40 40-40zm480-320c0 22-18 40-40 40h-80a40 40 0 010-80h80c22 0 40 18 40 40zM706 763l57 56a40 40 0 1056-56l-56-57a40 40 0 10-57 57zm-509 56l57-56a40 40 0 10-57-57l-56 57a40 40 0 1056 56zm-77-379a40 40 0 010 80H40a40 40 0 010-80h80zm21-243l56 57a40 40 0 1057-57l-57-56a40 40 0 10-56 56zm622 57l56-57a40 40 0 10-56-56l-57 56a40 40 0 1057 57zM440 40v80a40 40 0 0080 0V40a40 40 0 00-80 0z"
+              d="M480 800c22 0 40 18 40 40v80a40 40 0 01-80 0v-80c0-22 18-40 40-40zm480-320c0 22-18 40-40 40h-80a40 40 0 010-80h80c22 0 40 18 40 40zM706 763l57 56a40 40 0 1056-56l-56-57a40 40 0 10-57 57zm-509 56l57-56a40 40 0 10-57-57l-56 57a40 40 0 1056 56zm-77-379a40 40 0 010 80H40a40 40 0 010-80h80zm21-243l56 57a40 40 0 1057-57l-57-56a40 40 0 10-56 56zm622 57l56-57a40 40 0 10-56-56l-57 56a40 40 0 1057 57zM440 40v80a40 40 0 0080 0V40a40 40 0 00-80 0z"
           />
         </symbol>
       </defs>
@@ -67,9 +67,9 @@ export default {
     // 保存滚动值，这是兼容的写法
     handleScroll() {
       this.scrollTop =
-        window.pageYOffset ||
-        document.documentElement.scrollTop ||
-        document.body.scrollTop;
+          window.pageYOffset ||
+          document.documentElement.scrollTop ||
+          document.body.scrollTop;
     },
   },
   mounted() {
@@ -108,6 +108,7 @@ $btn-bg-hover: #fff;
     box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.4);
   }
 }
+
 .button-svg {
   width: 1.75rem;
   height: 1.75rem;
@@ -124,6 +125,7 @@ $btn-bg-hover: #fff;
 .dark-button[aria-pressed="true"] .svg_mode-light {
   display: none;
 }
+
 .dark-button[aria-pressed="false"] .svg_mode-light,
 .dark-button[aria-pressed="true"] .svg_mode-dark {
   display: block;
@@ -133,6 +135,7 @@ $btn-bg-hover: #fff;
 .dark-button.button-clicked {
   animation: btn-clicked 0.3s ease-out forwards;
 }
+
 @keyframes btn-clicked {
   0% {
     transform: scale(1.2);
