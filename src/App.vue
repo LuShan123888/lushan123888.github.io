@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <img id="background-img" :src="bgImg"/>
-    <dark-button id="dark-button" :style="style.darkButton"></dark-button>
+    <dark-button id="dark-button" :style="style.darkButton"/>
     <v-app-bar app :collapse="isCollapse" :style="{ 'z-index': '101' }">
       <v-app-bar-nav-icon class="ml-3">
         <v-avatar size="45" rounded>
@@ -13,16 +13,13 @@
 
     <v-main>
       <v-container fluid class="pa-0 ma-0">
-        <home @collapse="collapse" @changeIcon="changeIcon" ref="home"></home>
+        <home @collapse="collapse" @changeIcon="changeIcon" ref="home"/>
       </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import logo from "../src/assets/img/favicon.png";
-import backButtonLight from "../src/assets/img/back-light.png";
-import backButtonDark from "../src/assets/img/back-dark.png";
 import DarkButton from "./components/DarkButton";
 import Home from "./views/Home";
 
@@ -31,22 +28,25 @@ export default {
   components: {Home, DarkButton},
   computed: {
     backButton: function () {
-      return this.isDark ? backButtonDark : backButtonLight;
+      return this.isDark ? this.GLOBAL.icons.backDark : this.GLOBAL.icons.backLight;
     },
     isMobile: function () {
       return this.$vuetify.breakpoint.mobile;
     },
-
     isDark: function () {
       return this.$vuetify.theme.dark;
     },
   },
-  watch: {},
+  watch: {
+    isDark: function () {
+      this.icon = this.backButton;
+    }
+  },
   data: function () {
     return {
       title: "MyProjects",
       bgImg: null,
-      icon: logo,
+      icon: null,
       isCollapse: false,
       style: {
         darkButton: {
@@ -58,14 +58,15 @@ export default {
   },
   methods: {
     collapse: function (active) {
-      this.isCollapse = active ? true : false;
+      this.isCollapse = active;
     },
     changeIcon: function (active) {
-      this.icon = active ? this.backButton : logo;
+      this.icon = active ? this.backButton : this.GLOBAL.icons.favicon;
     },
   },
   mounted() {
-    this.bgImg = this.GLOBAL.bgImg;
+    this.bgImg = this.GLOBAL.images.bgImg;
+    this.icon = this.GLOBAL.icons.favicon;
   },
 };
 </script>

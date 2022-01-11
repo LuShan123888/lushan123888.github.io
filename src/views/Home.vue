@@ -164,8 +164,7 @@ export default {
           width: "90%",
           borderTopLeftRadius: "0.5rem",
           borderTopRightRadius: "0.5rem",
-          transition:
-              "height 0.5s cubic-bezier(.6,.24,.51,1.03), background 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+          transition: "height 0.5s cubic-bezier(.6,.24,.51,1.03), background 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
         },
       },
       class: {
