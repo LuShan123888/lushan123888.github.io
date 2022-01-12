@@ -21,7 +21,7 @@
 
 <script>
 import DarkButton from "./components/DarkButton";
-import Home from "./views/Home";
+import Home from "./pages/Home/Home";
 
 export default {
   name: "app",

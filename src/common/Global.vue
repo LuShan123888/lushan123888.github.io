@@ -1,11 +1,11 @@
 <script>
 const images = {
-  bgImg: "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/assets/images/bg.jpg"
+  bgImg: "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/static/images/bg.jpg"
 }
 const icons = {
-  backDark: "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/assets/icons/back-dark.png",
-  backLight: "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/assets/icons/back-light.png",
-  favicon: "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/assets/icons/favicon.png"
+  backDark: "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/static/icons/back-dark.png",
+  backLight: "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/static/icons/back-light.png",
+  favicon: "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/static/icons/favicon.png"
 };
 const tabs = [
   {
@@ -16,7 +16,7 @@ const tabs = [
         title: "Resume",
         describe: "一个基于 Vue 的个人简历网站",
         img:
-            "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/assets/images/resume.jpg",
+            "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/static/images/resume.jpg",
         link: "https://resume.lushan.tech",
         github: "https://github.com/LuShan123888/Resume",
       },
@@ -24,7 +24,7 @@ const tabs = [
         title: "MyProjects",
         describe: "一个用于展示项目的个人主页",
         img:
-            "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/assets/images/myprojects.jpg",
+            "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/static/images/myprojects.jpg",
         link: "https://lushan.tech",
         github: "https://github.com/LuShan123888/lushan123888.github.io",
       },
@@ -38,7 +38,7 @@ const tabs = [
         title: "记账吧",
         describe: "一个简约的在线记账网站",
         img:
-            "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/assets/images/tally.jpg",
+            "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/static/images/tally.jpg",
         link: "https://tally.lushan.tech",
         github: "https://github.com/LuShan123888/Tally",
       },
@@ -47,7 +47,7 @@ const tabs = [
         describe:
             '“光光爱”是利用互联网平台优势解决用餐浪费和小额捐赠的微信小程序。该项目包含光盘打卡，公益宣传，排行榜，爱心捐赠，商城兑换等功能。于2020年9月上线，现有团队成员30余人，用户1000+，入驻商家10+。',
         img:
-            "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/assets/images/gms.jpg",
+            "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/static/images/gms.jpg",
         link: "https://gms.guangguangai.com/#/login",
         github: null,
       },
@@ -61,7 +61,7 @@ const tabs = [
         title: "SoftwareMagic",
         describe: "一个关于编程的个人知识库",
         img:
-            "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/assets/images/softwaremagic.jpg",
+            "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/static/images/softwaremagic.jpg",
         link: "https://softwaremagic.lushan.tech",
         github: "https://github.com/LuShan123888/SoftwareMagic",
       },
