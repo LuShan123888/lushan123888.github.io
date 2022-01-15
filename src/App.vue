@@ -2,18 +2,17 @@
   <v-app>
     <img id="background-img" :src="bgImg"/>
     <dark-button id="dark-button" :style="style.darkButton"/>
-    <v-app-bar app :collapse="isCollapse" :style="{ 'z-index': '101' }">
+    <v-app-bar app :collapse="appBar.isCollapse" :style="{ 'z-index': '101' }">
       <v-app-bar-nav-icon class="ml-3">
         <v-avatar size="45" rounded>
-          <img :src="icon" alt="avatar"/>
+          <img :src="appBar.icon" alt="logo"/>
         </v-avatar>
       </v-app-bar-nav-icon>
-      <v-app-bar-title class="text-h6" v-text="title"></v-app-bar-title>
+      <v-app-bar-title class="text-h6" v-text="appBar.title"></v-app-bar-title>
     </v-app-bar>
-
     <v-main>
       <v-container fluid class="pa-0 ma-0">
-        <home @collapse="collapse" @changeIcon="changeIcon" ref="home"/>
+        <home @collapse="collapse" ref="home"/>
       </v-container>
     </v-main>
   </v-app>
@@ -21,7 +20,7 @@
 
 <script>
 import DarkButton from "./components/DarkButton";
-import Home from "./pages/Home/Home";
+import Home from "./pages/Home";
 
 export default {
   name: "app",
@@ -44,10 +43,12 @@ export default {
   },
   data: function () {
     return {
-      title: "MyProjects",
       bgImg: null,
-      icon: null,
-      isCollapse: false,
+      appBar: {
+        title: "MyProjects",
+        icon: null,
+        isCollapse: false,
+      },
       style: {
         darkButton: {
           top: this.$vuetify.breakpoint.mobile ? "10px" : "10px",
@@ -58,15 +59,16 @@ export default {
   },
   methods: {
     collapse: function (active) {
-      this.isCollapse = active;
+      this.appBar.isCollapse = active;
+      this.changeIcon(active);
     },
     changeIcon: function (active) {
-      this.icon = active ? this.backButton : this.GLOBAL.icons.favicon;
+      this.appBar.icon = active ? this.backButton : this.GLOBAL.icons.favicon;
     },
   },
   mounted() {
     this.bgImg = this.GLOBAL.images.bgImg;
-    this.icon = this.GLOBAL.icons.favicon;
+    this.appBar.icon = this.GLOBAL.icons.favicon;
   },
 };
 </script>
