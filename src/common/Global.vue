@@ -41,7 +41,7 @@ const tab = {
           img:
               "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/static/images/tally.jpg",
           link: "http://tally.lushan.tech",
-          github: "https://github.com/LuShan123888/Tally",
+          github: "https://github.com/LuShan123888/Tally-Frontend",
         },
         {
           title: '"光光爱"微信小程序后台管理系统',
