@@ -36,11 +36,11 @@ const tab = {
       icon: "mdi-database",
       cards: [
         {
-          title: "记账吧",
+          title: "云记贝",
           describe: "一个简约的在线记账网站",
           img:
               "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/static/images/tally.jpg",
-          link: "http://tally.lushan.tech",
+          link: "https://tally.ltd",
           github: "https://github.com/LuShan123888/Tally-Frontend",
         },
         {
