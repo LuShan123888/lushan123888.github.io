@@ -1,6 +1,6 @@
 <script>
 const images = {
-  bgImg: "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/static/images/bg.jpg"
+  background: "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/static/images/background.jpg"
 }
 const icons = {
   backDark: "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/static/icons/back-dark.png",

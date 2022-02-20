@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <img id="background-img" :src="bgImg"/>
+    <img id="background-img" :src="background"/>
     <dark-button id="dark-button" :style="style.darkButton"/>
     <v-app-bar app :collapse="appBar.isCollapse" :style="{ 'z-index': '101' }">
       <v-app-bar-nav-icon class="ml-3">
@@ -43,7 +43,7 @@ export default {
   },
   data: function () {
     return {
-      bgImg: null,
+      background: null,
       appBar: {
         title: "MyProjects",
         icon: null,
@@ -67,7 +67,7 @@ export default {
     },
   },
   mounted() {
-    this.bgImg = this.GLOBAL.images.bgImg;
+    this.background = this.GLOBAL.images.background;
     this.appBar.icon = this.GLOBAL.icons.favicon;
   },
 };
