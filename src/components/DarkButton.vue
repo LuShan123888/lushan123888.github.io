@@ -1,8 +1,8 @@
 <template>
   <div class="btn-container">
     <button
-        class="dark-button"
         aria-pressed="false"
+        class="dark-button"
         @click="buttonClick($event)"
     >
       <svg class="button-svg" focusable="false">
@@ -11,9 +11,9 @@
       </svg>
     </button>
     <!-- Icon Definitions -->
-    <svg class="visually-hidden" v-show="false">
+    <svg v-show="false" class="visually-hidden">
       <defs>
-        <symbol viewBox="0 0 960 960" id="icon-mode-dark">
+        <symbol id="icon-mode-dark" viewBox="0 0 960 960">
           <path
               d="M340 41C47 129-112 544 147 798c207 204 515 205 713-62-166 6-347-43-455-189-109-147-80-372-65-506z"
           />
@@ -21,7 +21,7 @@
               d="M870 331l-12 102 93 43-101 20-12 102-50-90-101 20 70-75-50-90 93 43 70-75zM522 300l23 57 62-5-47 40 23 57-52-32-48 40 15-60-52-33 61-4 15-60zM744 16l12 89 89 16-81 39 12 90-62-65-81 39 42-80-62-65 89 16 42-79z"
           />
         </symbol>
-        <symbol viewBox="0 0 960 960" id="icon-mode-light">
+        <symbol id="icon-mode-light" viewBox="0 0 960 960">
           <circle cx="479.5" cy="480.5" r="242"/>
           <path
               d="M480 800c22 0 40 18 40 40v80a40 40 0 01-80 0v-80c0-22 18-40 40-40zm480-320c0 22-18 40-40 40h-80a40 40 0 010-80h80c22 0 40 18 40 40zM706 763l57 56a40 40 0 1056-56l-56-57a40 40 0 10-57 57zm-509 56l57-56a40 40 0 10-57-57l-56 57a40 40 0 1056 56zm-77-379a40 40 0 010 80H40a40 40 0 010-80h80zm21-243l56 57a40 40 0 1057-57l-57-56a40 40 0 10-56 56zm622 57l56-57a40 40 0 10-56-56l-57 56a40 40 0 1057 57zM440 40v80a40 40 0 0080 0V40a40 40 0 00-80 0z"
@@ -78,7 +78,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 $btn-fg: #503660;
 $btn-bg: #fafafd;
 $btn-fg-hover: #418cec;

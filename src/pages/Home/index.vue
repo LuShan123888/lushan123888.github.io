@@ -1,6 +1,6 @@
 <template>
   <div :style="{ width: '100%' }">
-    <v-row style="top: 30vh; position: fixed" no-gutters>
+    <v-row no-gutters style="top: 30vh; position: fixed">
       <v-col
           class="text-center"
           cols="12"
@@ -10,19 +10,19 @@
         <h4 :style="{fontSize: isMobile ? '1rem' : '1.5rem'}" v-text="subtitle"/>
       </v-col>
     </v-row>
-    <v-row style="width: 100%; position: fixed; bottom: 0" no-gutters>
+    <v-row no-gutters style="width: 100%; position: fixed; bottom: 0">
       <v-col
+          id="panel"
+          v-click-outside="{ handler: shrink, include: include }"
           :cols="isMobile ? 12 : 9"
           :style="[style.panel]"
-          id="panel"
           class="mx-auto"
-          v-click-outside="{ handler: shrink, include: include }"
       >
         <v-tabs
             v-model="tab.index"
+            grow
             icons-and-text
             style="border-top-left-radius: 0.5rem; border-top-right-radius: 0.5rem"
-            grow
         >
           <v-tabs-slider/>
           <v-tab
@@ -34,54 +34,48 @@
             {{ item.title }}
             <v-icon>{{ item.icon }}</v-icon>
           </v-tab>
-          <v-tab href="#tab-4" v-show="false"/>
+          <v-tab v-show="false" href="#tab-4"/>
         </v-tabs>
         <v-tabs-items v-model="tab.index">
           <v-tab-item
               v-for="(item, index) in tab.data"
-              :key="index"
-              :value="'tab-' + index"
+              :key="item"
               :style="{overflow: 'scroll', height: isMobile ? '80vh' : '90vh'}"
-          >
+              :value="'tab-' + index">
             <v-row
-                justify="center"
                 class="pt-8"
-                style="padding-bottom: 100px"
-            >
+                justify="center"
+                style="padding-bottom: 100px">
               <v-col
                   v-for="(item, index) in item.cards"
                   :key="index"
-                  :cols="isMobile ? 10 : 5"
-              >
+                  :cols="isMobile ? 10 : 5">
                 <v-hover v-slot="{ hover }">
                   <v-card
-                      class="my-2 transition-swing"
-                      :class="[`elevation-${hover ? 24 : 6}`, $vuetify.breakpoint.mobile ? 'mx-0' : 'mx-7']">
+                      :class="[`elevation-${hover ? 24 : 6}`, $vuetify.breakpoint.mobile ? 'mx-0' : 'mx-7']"
+                      class="my-2 transition-swing">
                     <v-img
                         :src="item.img"
-                        style="border-bottom: solid #1976d2"
                         :style="{
                         height: $vuetify.breakpoint.mobile ? '200px' : '300px',
                       }"
-                    />
+                        style="border-bottom: solid #1976d2"/>
                     <v-card-title v-text="item.title"/>
                     <v-card-subtitle style="text-indent:2em}" v-text="item.describe"/>
                     <v-card-actions class="pb-5">
                       <v-btn
-                          :href="item.link"
-                          target="_blank"
-                          color="primary"
                           :disabled="item.link == null"
-                      >
+                          :href="item.link"
+                          color="primary"
+                          target="_blank">
                         <span class="mr-1" v-text="'预览效果'"/>
                         <v-icon>mdi-monitor-cellphone</v-icon>
                       </v-btn>
                       <v-btn
-                          :href="item.github"
-                          target="_blank"
-                          color="primary"
                           :disabled="item.github == null"
-                      >
+                          :href="item.github"
+                          color="primary"
+                          target="_blank">
                         <span class="mr-1" v-text="'查看源码'"/>
                         <v-icon>mdi-code-braces</v-icon>
                       </v-btn>

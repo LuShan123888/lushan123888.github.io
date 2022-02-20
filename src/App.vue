@@ -2,17 +2,17 @@
   <v-app>
     <img id="background-img" :src="background"/>
     <dark-button id="dark-button" :style="style.darkButton"/>
-    <v-app-bar app :collapse="appBar.isCollapse" :style="{ 'z-index': '101' }">
+    <v-app-bar :collapse="appBar.isCollapse" :style="{ 'z-index': '101' }" app>
       <v-app-bar-nav-icon class="ml-3">
-        <v-avatar size="45" rounded>
+        <v-avatar rounded size="45">
           <img :src="appBar.icon" alt="logo"/>
         </v-avatar>
       </v-app-bar-nav-icon>
       <v-app-bar-title class="text-h6" v-text="appBar.title"></v-app-bar-title>
     </v-app-bar>
     <v-main>
-      <v-container fluid class="pa-0 ma-0">
-        <home @collapse="collapse" ref="home"/>
+      <v-container class="pa-0 ma-0" fluid>
+        <home ref="home" @collapse="collapse"/>
       </v-container>
     </v-main>
   </v-app>
