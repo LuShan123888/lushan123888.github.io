@@ -40,7 +40,7 @@ const tab = {
           describe: "一个简约的在线记账网站",
           img:
               "https://cdn.jsdelivr.net/gh/LuShan123888/lushan123888.github.io@gh-pages/static/images/tally.jpg",
-          link: "https://tally.ltd",
+          link: "https://tally.lushan.tech",
           github: "https://github.com/LuShan123888/Tally-Frontend",
         },
         {
